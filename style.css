@@ -1,0 +1,532 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --pink: #e84393;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html {
+    font-size: 55.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+.heading, .pesanan h1 {
+    text-align: center;
+    font-size: 4rem;
+    color: #47859a;
+    padding: 1rem;
+    margin: 5rem 0;
+    background: rgba(255, 51, 153, .05);
+}
+
+.heading span,
+.pesanan span {
+    color: var(--pink);
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background: #333;
+    color: #fff;
+    padding: .9rem 3.5rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+
+.btn:hover {
+    background: var(--pink);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #ffe3e1;
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+header .logo {
+    font-size: 2rem;
+    font-weight: bolder;
+    display: flex;
+    gap: 1;
+    align-items: center;
+}
+
+header .logo img {
+    width: 40px;
+}
+
+header .logo a {
+    color: #47859a;
+}
+
+header .logo span {
+    color: var(--pink);
+}
+
+header .navbar a {
+    font-size: 2.2rem;
+    padding: 0 1.5rem;
+    color: #47859a;
+}
+
+header .navbar a:hover {
+    color: var(--pink);
+}
+
+
+header .bx {
+    font-size: 3rem;
+    color: #47859a;
+}
+
+header .icons .bx {
+    font-size: 2.5rem;
+    color: #47859a;
+    display: inline-block;
+}
+
+header .icons .bx:hover {
+    color: var(--pink);
+}
+
+header #toggler {
+    display: none;
+}
+
+header .bx {
+    display: none;
+}
+
+header .fa-bars {
+    font-size: 3rem;
+    color: #47859a;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    border: .1rem solid rgba(0, 0, 0, .3);
+    display: none;
+}
+
+.beranda {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background: url(yarn\ bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.beranda .content {
+    max-width: 70%;
+    color: #47859a;
+}
+
+.beranda .content h3 {
+    font-size: 4rem;
+    color: #47859a;
+}
+
+.beranda .content span {
+    font-size: 2.5rem;
+    color: var(--pink);
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+
+.beranda p {
+    font-size: 1.5rem;
+    color: #000;
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+
+/* media queries */
+@media (max-width:991px) {
+
+    html {
+        font-size: 55%;
+    }
+
+    header {
+        padding: 2rem;
+    }
+
+    section {
+        padding: 2rem;
+    }
+
+    .home {
+        background-position: left;
+    }
+
+}
+
+@media (max-width:768px) {
+
+    .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+
+    header .bx {
+        display: block;
+    }
+
+    header .icons {
+        display: block;
+        font-size: 3rem;
+    }
+
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #ffe3e19e;
+        border-top: .1rem solid rgba(0, 0, 0, .1);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    header #toggler:checked~.navbar {
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    header .navbar a {
+        margin: 1.5rem;
+        padding: 1.5rem;
+        background: #fff;
+        border: .1rem solid rgba(0, 0, 0, .1);
+        display: block;
+    }
+
+    .home .content h3 {
+        font-size: 5rem;
+    }
+
+    .home .content span {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width:450px) {
+
+    html {
+        font-size: 50%;
+    }
+
+    .heading {
+        Edit || Hapus font-size: 3rem;
+    }
+}
+
+/*design table 1*/
+.table1,td,th, 
+.table-pesanan,td,th{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #232323;
+    border-collapse: collapse;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.table1 th, .table-pesanan th {
+    background-color: #ffe3e1;
+}
+
+.table1,td,th {
+    border: 1px solid #999;
+    padding: 8px 9px;
+    font-size: 1.5rem;
+    justify-content: space-between;
+}
+
+.kategori .heading {
+    padding: 2rem 1%;
+}
+
+.kategori h2{
+    font-size: 25px;
+    color: #000000;
+}
+
+.kategori table tr td{
+    border: none;
+    text-align: left;
+}
+
+.kategori input{
+    border: solid 2px #666;
+    padding: 5px 7px;
+}
+
+.kategori .file{
+    border: none;
+    padding: 5px 7px;
+}
+
+/* .kategori input::-webkit-input-placeholder{
+    color: #e84393;
+} */
+
+.kategori select{
+    width: 200px;
+    border: none;
+    background-color: #fff8f7;
+    padding: 5px;
+}
+
+.kategori button{
+    padding: 5px 10px;
+    border: none;
+    background-color: #e84393;
+    color: #fff;
+    border-radius: 5px;   
+}
+
+.kategori .kategori-container {
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.kategori .kategori-container .kategori-card {
+    width: 100%;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    padding: 10px;
+    justify-content: space-between;
+    align-self: center;
+    background-size: cover;
+}
+
+.kategori .kategori-container .kategori-card .kategori-content img {
+    width: 60px;
+    justify-content: center;
+}
+
+.kategori .kategori-container .kategori-card .kategori-content {
+    padding: 5px;
+}
+
+.kategori .kategori-container .kategori-card .kategori-content h1 {
+    font-size: 2rem;
+    text-align: center;
+    color: #47859a;
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+}
+
+.kategori .kategori-container .kategori-card .kategori-content h4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 1.4rem;
+    color: #000;
+    text-align: center;
+    margin: .7rem 0;
+    width: 20%;
+    background-color: #ffe3e1;
+}
+
+.kategori .kategori-container .kategori-card .kategori-content h4:hover {
+    color: var(--pink);
+}
+
+.produk .heading {
+    padding: 2rem 1%;
+}
+
+.produk .produk-container {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.produk .produk-container .produk-card {
+    width: 100%;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    padding: 15px;
+    justify-content: space-between;
+    align-self: center;
+}
+
+.produk .produk-container .produk-card .produk-content img {
+    width: 60px;
+    justify-content: center;
+}
+
+.produk .produk-container .produk-card .produk-content {
+    padding: 5px;
+}
+
+.produk .produk-container .produk-card .produk-content h1 {
+    font-size: 2rem;
+    text-align: center;
+    color: #47859a;
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+}
+
+.produk .produk-container .produk-card .produk-content a {
+    padding-top: 1rem;
+    padding-bottom: 5rem;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 1.5rem;
+    color: #000;
+    text-align: center;
+    margin: .7rem 0;
+    width: 30%;
+    background-color: #ffe3e1;
+}
+
+.produk .produk-container .produk-card .produk-content a:hover {
+    color: var(--pink);
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    background: #ffe3e1;
+    padding: 2rem 9%;
+    justify-content: center;
+    text-align: center;
+}
+
+.footer-box h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #47859a;
+}
+
+.footer-box p {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2;
+}
+
+.social a .bx {
+    font-size: 20px;
+    color: #000;
+    border-radius: 0.5rem;
+}
+
+.social a .bx:hover {
+    background: #fff8f7;
+    color: var(--pink);
+}
+
+.footer-box h3 {
+    font-weight: 600;
+    margin-bottom: 2px;
+    font-size: 2rem;
+    color: #47859a;
+}
+
+.footer-box li a {
+    color: #666;
+}
+
+.footer-box li a:hover {
+    color: var(--pink);
+}
+
+.notifikasi .heading {
+    padding: 2rem 1%;
+}
+
+.notifikasi .notifikasi-container {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.notifikasi .notifikasi-container .notfi-card {
+    width: 100%;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    padding: 15px;
+    justify-content: space-between;
+    align-self: center;
+}
+
+.produk .produk-container .produk-card .produk-content img {
+    width: 60px;
+    justify-content: center;
+}
+
+.produk .produk-container .produk-card .produk-content {
+    padding: 5px;
+}
+
+.produk .produk-container .produk-card .produk-content h1 {
+    font-size: 2rem;
+    text-align: center;
+    color: #47859a;
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+}
+
+.produk .produk-container .produk-card .produk-content a {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #000;
+    text-align: center;
+    margin: .7rem 0;
+    width: 30%;
+    background-color: #ffe3e1;
+}
+
+.produk .produk-container .produk-card .produk-content a:hover {
+    color: var(--pink);
+}
+
+
+
+/* kelola pesanan */
+.pesanan{
+    padding: 2rem 1%;
+}
+
+.pesanan h1{
+    margin-top: 12rem;
+    text-align: center;
+}
+.table-pesanan td a{
+    padding: 5px 7px;
+    background-color: #06D001;
+    color: #fff;
+}
+/* kelola pesanan */
